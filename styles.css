@@ -1,0 +1,138 @@
+/* === Reset de márgenes y box-sizing para consistencia === */
+* {
+  box-sizing: border-box;  /* Asegura que el padding y borde se incluyan en el tamaño total */
+  margin: 0;
+  padding: 0;
+}
+
+/* === Estilos generales del body === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Fuente limpia y moderna */
+  background: linear-gradient(to right, #f1f4f9, #dff1ff);        /* Fondo degradado suave */
+  color: #333;                /* Texto principal en gris oscuro */
+  line-height: 1.6;           /* Espaciado entre líneas */
+  padding: 20px;              /* Espaciado interno general */
+}
+
+/* === Contenedor principal centrado === */
+.container {
+  max-width: 1200px;          /* Limita el ancho del contenido */
+  margin: auto;               /* Centra horizontalmente */
+  padding: 30px;              /* Espaciado interno */
+}
+
+/* === Título principal === */
+h1 {
+  text-align: center;         /* Centrado en pantalla */
+  color: #0e5e6f;             /* Azul profesional */
+  margin-bottom: 30px;        /* Separación inferior */
+  font-size: 36px;            /* Tamaño de fuente grande */
+}
+
+/* === Contenedor de productos en formato de grilla flexible === */
+.productos {
+  display: flex;              /* Flexbox para organizar productos en fila */
+  flex-wrap: wrap;            /* Permite que pasen a otra fila si no caben */
+  gap: 20px;                  /* Espacio entre tarjetas */
+  justify-content: center;   /* Centrado horizontal de los productos */
+}
+
+/* === Tarjeta de producto individual === */
+.producto {
+  background-color: #ffffff;                              /* Fondo blanco */
+  border-radius: 12px;                                    /* Bordes redondeados */
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);              /* Sombra suave para profundidad */
+  text-align: center;
+  transition: transform 0.3s ease;                        /* Animación al hacer hover */
+}
+
+/* Efecto de elevación al pasar el cursor */
+.producto:hover {
+  transform: translateY(-5px);                            /* Eleva la tarjeta */
+}
+
+/* Título de cada producto */
+.producto h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #0e5e6f;
+}
+
+/* Precio del producto */
+.producto p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;                                            /* Gris neutro */
+}
+
+/* Botón de compra */
+.producto button {
+  padding: 10px 16px;
+  background-color: #0e5e6f;                              /* Azul oscuro */
+  color: #fff;                                            /* Texto blanco */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.producto button:hover {
+  background-color: #1f7a8c;
+}
+
+/* === Sección del carrito === */
+.carrito {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 40px;                                         /* Espacio arriba del carrito */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);                 /* Sombra para destacar */
+}
+
+/* Título del carrito */
+.carrito h2 {
+  margin-bottom: 15px;
+  color: #0e5e6f;
+  text-align: center;
+}
+
+/* Lista de productos dentro del carrito */
+.carrito ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+/* Elemento individual del carrito */
+.carrito li {
+  padding: 10px;
+  background-color: #f5f7fa;
+  margin: 5px 0;
+  border-radius: 6px;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Total del carrito */
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0e5e6f;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* === Estilos responsivos para móviles === */
+@media (max-width: 768px) {
+  .producto {
+    width: 90%;              /* Ocupa casi todo el ancho disponible */
+  }
+
+  h1 {
+    font-size: 28px;         /* Título más pequeño en móvil */
+  }
+}
